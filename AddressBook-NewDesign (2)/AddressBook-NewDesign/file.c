@@ -1,0 +1,36 @@
+/*
+ * File: file.c
+ * Author: Alisha Shelke
+ * Description: Handles saving and loading contact details from a file.
+ */
+ 
+#include <stdio.h>
+#include "file.h"
+
+void saveContactsToFile(AddressBook *addressBook) {
+
+    FILE *fp = fopen("contacts.csv", "w");
+    
+    fprintf(fp, "%d\n", addressBook -> contactCount);
+
+    for (size_t i = 0; i < addressBook -> contactCount ; i++)
+    {
+        fprintf(fp, "%s, %s, %s\n ", addressBook -> contacts[i].name, addressBook -> contacts[i].phone,addressBook -> contacts[i].email);
+    }
+}
+
+void loadContactsFromFile(AddressBook *addressBook) {
+
+
+    FILE *fp = fopen("contacts.csv", "r");
+
+    fscanf(fp, "%d\n", &addressBook -> contactCount);
+
+    printf("count -> %d\n", addressBook -> contactCount);
+
+    for (size_t i = 0; i < addressBook -> contactCount ; i++)
+    {
+        fscanf(fp, "%[^,], %[^,], %[^\n]\n", addressBook -> contacts[i].name, addressBook -> contacts[i].phone,addressBook -> contacts[i].email);
+    }
+    
+}
