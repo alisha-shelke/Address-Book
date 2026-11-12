@@ -1,21 +1,38 @@
-# Address Book Project in C
+# Address Book Management System in C
 
-**Author:** Alisha Shelke
+**Developed by:** Alisha Shelke
 
-## Description
-A simple Address Book application developed using C.
+## Project Overview
+A contact management application developed using C programming.
+It allows users to efficiently manage contact information.
 
 ## Features
 - Create new contacts
 - Search contacts
-- Edit contact details
+- Edit existing contact details
 - Delete contacts
-- Display and sort contacts
+- Display all contacts
+- Sort contacts
 
 ## Technologies Used
 - C Programming
 - Data Structures
 - File Handling
 
-## Project Files
-The project contains source files, header files, and contact data files.
+## Project Structure
+- main.c
+- contact.c
+- contact.h
+- file.c
+- file.h
+- populate.c
+- populate.h
+- contacts.csv
+- contacts.txt
+
+## Description
+This project demonstrates C programming concepts,
+modular programming, data management, and file operations.
+
+## Author
+Alisha Shelke
